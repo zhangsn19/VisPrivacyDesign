@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inference Privacy Prototype</title>
+    <link rel="stylesheet" href="./styles.css?v=20260831-15" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="./index.html" aria-label="Return to home">
+          <span class="brand-mark"></span>
+          <span>
+            <small>Inference Privacy</small>
+            <strong>Inference Privacy</strong>
+          </span>
+        </a>
+
+        <div class="mode-links" aria-label="Page navigation">
+          <a class="mode-link active" href="./index.html">Prototype lab</a>
+                  </div>
+
+        <nav class="prototype-nav" id="prototypeNav" aria-label="Prototype types"></nav>
+
+        <section class="reference-card">
+          <button class="reference-preview" id="openMap" type="button">
+            <img src="./assets/frame2_right_crop.png" alt="Reference map of six inference privacy designs" />
+            <span>View design map</span>
+          </button>
+        </section>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" id="prototypeMeta">Layered / Not in-situ</p>
+            <h1 id="prototypeTitle">Panel beside the scene</h1>
+          </div>
+          <div class="scenario-tabs" id="scenarioTabs" role="tablist" aria-label="Inference privacy scenarios">
+            <button class="scenario-tab active" type="button" data-scenario="desk">Work desk</button>
+            <button class="scenario-tab" type="button" data-scenario="street">Living-room corner</button>
+            <button class="scenario-tab" type="button" data-scenario="venue">Shared office</button>
+          </div>
+        </header>
+
+        <section class="lab-grid">
+          <section class="scene-panel" aria-label="Interactive scene">
+            <div class="scene-toolbar">
+              <div>
+                <p class="eyebrow">Live scene</p>
+                <h2 id="scenarioTitle">Work desk</h2>
+              </div>
+              <button class="icon-button" id="hapticToggle" type="button" aria-pressed="true" aria-label="Toggle haptic reminder">
+                <span class="haptic-icon"></span>
+              </button>
+            </div>
+            <div class="scene-shell" id="sceneShell">
+              <div class="scene desk-scene active" data-scene="desk">
+                <div class="desk-surface"></div>
+                <div class="monitor scene-object" data-object="monitor" style="--x: 60%; --y: 18%;">
+                  <span>Expense form</span>
+                </div>
+                <div class="notebook scene-object" data-object="schedule" style="--x: 16%; --y: 50%;">
+                  <span>Wed 19:30<br />Appointment reminder</span>
+                </div>
+                <div class="badge scene-object" data-object="work" style="--x: 47%; --y: 57%;">
+                  <span>Visitor badge<br />R-23</span>
+                </div>
+                <div class="pill scene-object" data-object="health" style="--x: 72%; --y: 56%;">
+                  <span>RX</span>
+                </div>
+                <div class="cup scene-object" data-object="routine" style="--x: 82%; --y: 36%;">Coffee cup</div>
+              </div>
+
+              <div class="scene street-scene" data-scene="street">
+                <div class="skyline"></div>
+                <div class="road"></div>
+                <div class="street-sign scene-object" data-object="home" style="--x: 18%; --y: 33%;">Window area</div>
+                <div class="clinic scene-object" data-object="health" style="--x: 62%; --y: 35%;">Document stack</div>
+                <div class="license scene-object" data-object="car" style="--x: 48%; --y: 64%;">Bottle / supplies</div>
+                <div class="commute scene-object" data-object="routine" style="--x: 75%; --y: 63%;">Shelf items</div>
+                <div class="glasses-frame"></div>
+              </div>
+
+              <div class="scene venue-scene" data-scene="venue">
+                <div class="arena"></div>
+                <div class="big-screen scene-object" data-object="screen" style="--x: 18%; --y: 24%;">Window position</div>
+                <div class="audience-zone scene-object" data-object="crowd" style="--x: 14%; --y: 64%;">Storage box</div>
+                <div class="phone-screen scene-object" data-object="phone" style="--x: 73%; --y: 31%;">Books / files</div>
+                <div class="broadcast scene-object" data-object="broadcast" style="--x: 55%; --y: 55%;">Desk documents</div>
+              </div>
+
+              <div class="overlay-layer" id="overlayLayer"></div>
+            </div>
+          </section>
+
+          <section class="prototype-panel" aria-live="polite">
+            <div class="prototype-header">
+              <div>
+                <p class="eyebrow" id="prototypeMode">Layered / Not in-situ</p>
+                <h2 id="prototypePanelTitle">Panel beside the scene</h2>
+              </div>
+              
+            </div>
+            <div class="prototype-body" id="prototypeBody"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <dialog class="map-dialog" id="mapDialog" aria-label="Design map">
+      <button class="dialog-close" id="closeMap" type="button" aria-label="Close">×</button>
+      <img src="./assets/frame2_right_crop.png" alt="Reference map of six inference privacy designs" />
+    </dialog>
+
+    <script src="./script.js?v=20260831-15"></script>
+  </body>
+</html>
