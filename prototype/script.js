@@ -98,17 +98,6 @@ PROTOTYPES.forEach((prototype) => {
   if (translated) [prototype.title, prototype.meta, prototype.short, prototype.storyboard] = translated;
 });
 
-// Additional concepts for the 12-design speed-dating pool. Each concept keeps
-// a distinct interaction framing while reusing the tested interaction engines.
-PROTOTYPES.push(
-  { id: "spotlight", title: "Evidence spotlight", meta: "In-situ / Focused", short: "Spotlights one cue at a time so the participant can inspect its contribution.", icon: "icon-boxed", renderer: "boxedPanel", storyboard: [["Context", "A participant shares a room photo for task help."], ["Problem", "Small details can contribute to a larger inference."], ["Concept", "A spotlight isolates one contributing cue and explains its weight."], ["Resolution", "The participant masks only the cue that matters."]] },
-  { id: "consent", title: "Just-in-time consent", meta: "Dialog / In-situ", short: "Asks for permission at the moment an inference path is about to be used.", icon: "icon-dialog", renderer: "dialog", storyboard: [["Context", "An assistant is about to use a visible document."], ["Problem", "The participant may not expect secondary use of the cue."], ["Concept", "A compact consent prompt names the inference and asks what to allow."], ["Resolution", "The participant grants or denies this specific use."]] },
-  { id: "compare", title: "Before / after compare", meta: "Parallel / Not in-situ", short: "Compares the original and privacy-protected scene before sending.", icon: "icon-panel", renderer: "panel", storyboard: [["Context", "The participant prepares a photo for an AI request."], ["Problem", "Protection can remove useful context along with sensitive cues."], ["Concept", "A side-by-side preview makes utility and privacy trade-offs visible."], ["Resolution", "The participant chooses the version that fits the task."]] },
-  { id: "redaction", title: "Smart redaction", meta: "Automation / In-situ", short: "Suggests precise redactions and lets the participant tune each one.", icon: "icon-contained", renderer: "contained", storyboard: [["Context", "Several labels and names appear in the camera view."], ["Problem", "Manual masking is slow during a live task."], ["Concept", "Suggested redactions appear inline with adjustable intensity."], ["Resolution", "The participant accepts, edits, or rejects each suggestion."]] },
-  { id: "ledger", title: "Inference ledger", meta: "Timeline / Not in-situ", short: "Keeps a readable record of cues, inferences, and decisions over time.", icon: "icon-timeline", renderer: "timeline", storyboard: [["Context", "The assistant has processed multiple images in one session."], ["Problem", "Participants lose track of which cue caused a profile."], ["Concept", "A ledger records each inference event and protection decision."], ["Resolution", "The participant audits and revokes a prior decision."]] },
-  { id: "ambient", title: "Ambient privacy signal", meta: "Ambient / In-situ", short: "Uses a quiet visual signal to communicate rising inference risk.", icon: "icon-hint", renderer: "hint", storyboard: [["Context", "The participant is moving quickly through a capture task."], ["Problem", "Interruptive warnings compete with attention."], ["Concept", "A subtle edge signal grows as combined inference risk rises."], ["Resolution", "The participant pauses only when the signal crosses a threshold."]] }
-);
-
 const SCENARIOS = {
   desk: {
     title: "工作桌面",

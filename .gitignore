@@ -216,3 +216,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local research records and build outputs
+_author_notes/
+.DS_Store
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+.env.*
