@@ -253,29 +253,6 @@ const QUESTIONS = [
   { id: "overall", text: "Overall, this is a good design.", lo: "Strongly disagree", hi: "Strongly agree" }
 ];
 
-// Pre-test instruments: OPLIS-12-US knowledge items, IUIPC-10, and
-// Jian, Bisantz & Drury's trust-in-automation scale (12 items).
-const OPLIS_ITEMS = [
-  ["inp03", "Data collected by social network operators are deleted after five years.", "false"],
-  ["inp04", "Companies combine data traces from different websites to create user profiles.", "true"],
-  ["inp05", "Emails commonly pass through several computers before reaching the receiver.", "true"],
-  ["tea02", "What is a cookie?", "a", [["a", "A text file that helps a website recognize a returning user"], ["b", "A program that disables data collection"], ["c", "A computer virus transferred by websites"], ["d", "A browser plugin for safe browsing"]]],
-  ["tea03", "What does cache mean?", "a", [["a", "Buffer storage that can make browsing faster"], ["b", "Software that sends user data to third parties"], ["c", "Software that backs up data externally"], ["d", "A plugin that encrypts browsing data"]]],
-  ["tea04", "What is a trojan?", "a", [["a", "A program disguised as useful software that performs another function"], ["b", "Software that protects against malware"], ["c", "A harmless program made for fun"], ["d", "A virus that no longer exists"]]],
-  ["dpl04", "The phrase “right to be left alone” is written into the U.S. Constitution.", "false"],
-  ["dpl03", "The USA FREEDOM Act limits bulk collection of telecommunications metadata on U.S. citizens.", "true"],
-  ["dpl02", "When subscribing to a social networking service, the company generally has the legal right to sell personal information to third parties.", "true"],
-  ["dps01", "Regularly deleting cookies, cache, and browsing history can make tracking internet activity more difficult.", "true"],
-  ["dps04", "Passwords combining letters, numbers, and symbols are generally safer than simple words or numbers.", "true"],
-  ["dps05", "Using different passwords for different online services helps prevent access to personal data.", "true"]
-];
-const IUIPC_ITEMS = [
-  "It is important for me to control what information about me is available to people online.", "It is important for me to control who can access information about me online.", "It is important for me to control how information about me is used.", "I am concerned that companies are collecting too much personal information about me.", "I am concerned about my online privacy.", "I am concerned that my personal information may be used for purposes I did not approve.", "Organizations should tell people how they use personal information.", "Organizations should explain their privacy practices clearly.", "Organizations should provide people with ways to control their personal information.", "Organizations should let people know when their personal information is collected."
-];
-const TRUST_ITEMS = [
-  "Automated systems are deceptive.", "Automated systems behave in an underhanded manner.", "I am suspicious of automated systems’ intentions, actions, or outputs.", "I am wary of automated systems.", "Automated systems’ actions may have harmful or injurious outcomes.", "I am confident in automated systems.", "Automated systems provide security.", "Automated systems have integrity.", "Automated systems are dependable.", "Automated systems are reliable.", "I can trust automated systems.", "I am familiar with automated systems."
-];
-
 const state = {
   prototype: "panel",
   scenario: "desk",
